@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo02.png" type="image/x-icon">
+    <link rel="stylesheet" href="form.css">
+    <title>Hora Do Rango - Açaiteria & Hamburgueria</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blueBg">
+            <div class="box signin">
+                <h2>Bem-Vindo De Volta!</h2>
+                <button class="signinBtn">Entrar</button>
+            </div>
+            
+            <div class="box signup">
+                <h2>Não Possui Uma Conta?<br>Entre Para O Clube!</h2>
+                <button class="signupBtn">Registrar-se</button>
+            </div>
+        </div>
+
+        <div class="formBx">
+            <div class="form signinForm">
+                <form>
+                    <h3>Conecte-Se</h3>
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+
+                    <input type="submit" value="Entrar">
+                    <a href="#" class="forgot">Esqueçeu a Senha?</a>
+                </form>
+            </div>
+
+            <div class="form signupForm">
+                <form>
+                    <input type="text" placeholder="Nome Completo">
+                    <input type="email" placeholder="E-mail">
+                    <input type="password" placeholder="Senha">
+                    <input type="tel" placeholder="Número para Contato">
+                    <input type="text" placeholder="Endereço de Entrega">
+                    
+                    <input type="submit" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const signinBtn = document.querySelector('.signinBtn');
+        const signupBtn = document.querySelector('.signupBtn');
+        const formBx = document.querySelector('.formBx');
+        const body = document.querySelector('body');
+
+        signupBtn.onclick = function(){
+            formBx.classList.add('active')
+            body.classList.add('active')
+        }
+        signinBtn.onclick = function(){
+            formBx.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
